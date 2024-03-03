@@ -35,5 +35,7 @@ DISTFILES += \
     picture/pic.avif
 
 RESOURCES += \
+    lastpic.qrc \
     newpicture.qrc \
+    pics.qrc \
     picture3.qrc

@@ -31,7 +31,7 @@
     <rect>
      <x>30</x>
      <y>20</y>
-     <width>91</width>
+     <width>151</width>
      <height>16</height>
     </rect>
    </property>
@@ -42,14 +42,14 @@
   <widget class="QLabel" name="label_welcome">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>70</y>
-     <width>47</width>
-     <height>13</height>
+     <x>100</x>
+     <y>50</y>
+     <width>111</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
-    <string>Welcome</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#000000;&quot;&gt;Welcome&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_welcome_image">
@@ -65,6 +65,10 @@
     <string>TextLabel</string>
    </property>
   </widget>
+  <zorder>label_welcome_image</zorder>
+  <zorder>push_logout</zorder>
+  <zorder>label_hello</zorder>
+  <zorder>label_welcome</zorder>
  </widget>
  <resources/>
  <connections/>
