@@ -1,5 +1,6 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
+#include "registerwindow.h"
 
 LoginWindow::LoginWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -11,5 +12,13 @@ LoginWindow::LoginWindow(QWidget *parent)
 LoginWindow::~LoginWindow()
 {
     delete ui;
+}
+
+
+void LoginWindow::on_push_register_clicked()
+{
+    hide();
+    RegisterWindow *registerwindow = new RegisterWindow(this);
+    registerwindow->show();
 }
 

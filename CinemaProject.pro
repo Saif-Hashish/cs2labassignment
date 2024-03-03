@@ -12,15 +12,18 @@ SOURCES += \
     Users.cpp \
     main.cpp \
     loginwindow.cpp \
+    registerwindow.cpp \
     welcomewindow.cpp
 
 HEADERS += \
     Users.h \
     loginwindow.h \
+    registerwindow.h \
     welcomewindow.h
 
 FORMS += \
     loginwindow.ui \
+    registerwindow.ui \
     welcomewindow.ui
 
 # Default rules for deployment.
