@@ -33,3 +33,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     picture/pic.avif
+
+RESOURCES += \
+    newpicture.qrc \
+    picture3.qrc
