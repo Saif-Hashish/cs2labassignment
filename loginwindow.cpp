@@ -30,15 +30,15 @@ void LoginWindow::on_push_register_clicked()
 void LoginWindow::on_push_login_clicked()
 {
     for(int i=0;i<100;i++){
-        if ((ui->line_username->text() == usernames[i]) && (ui->line_password->text() == passwords[i])){
+        if ((ui->line_username->text()) == usernames[i] && (ui->line_password->text()) == passwords[i]){
 
             hide();
-            WelcomeWindow *welcomewindow = new WelcomeWindow(this);
-            welcomewindow->show();
+            WelcomeWindow* W = new WelcomeWindow(usernames[i],ages[i],this);
+            W->show();
         }
-            else {
-            ui->label_error->setVisible(true);
 
+        else {
+            ui->label_error->setVisible(true);
         }
     }
 
