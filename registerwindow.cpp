@@ -1,6 +1,7 @@
 #include "registerwindow.h"
 #include "ui_registerwindow.h"
 #include "Users.h"
+#include "welcomewindow.h"
 
 RegisterWindow::RegisterWindow(QWidget *parent)
     : QDialog(parent)
@@ -115,8 +116,12 @@ void RegisterWindow::infosave()
         usernames[usersCount] = username;
         passwords[usersCount] = password;
         ages[usersCount] = 2024 - year;
+
         usersCount++;
 
+        hide();
+        WelcomeWindow* W = new WelcomeWindow(usernames[usersCount-1],ages[usersCount-1],this);
+        W->show();
 
     }
 
