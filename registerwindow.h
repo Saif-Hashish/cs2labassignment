@@ -18,6 +18,7 @@ public:
 private slots:
     void on_registerbutton_clicked();
     void infosave();
+    void thecheckboxifs(bool &usergenrescheck);
 private:
     Ui::RegisterWindow *ui;
 };

@@ -14,6 +14,47 @@ RegisterWindow::RegisterWindow(QWidget *parent)
     ui->registererrorlabel->setVisible(false);
 }
 
+void RegisterWindow::thecheckboxifs(bool &usergenrescheck)
+{
+    QString chosengenres[6];
+
+    if(ui->actioncheckbox->isChecked())
+    {
+        chosengenres[0] = ui->actioncheckbox->text();
+        usergenrescheck = true;
+    }
+
+    if(ui->comdedycheckbox->isChecked())
+    {
+        chosengenres[1] = ui->comdedycheckbox->text();
+        usergenrescheck = true;
+    }
+
+    if(ui->dramacheckbox->isChecked())
+    {
+        chosengenres[2] = ui->dramacheckbox->text();
+        usergenrescheck = true;
+    }
+
+    if(ui->romancecheckbox->isChecked())
+    {
+        chosengenres[3] = ui->romancecheckbox->text();
+        usergenrescheck = true;
+    }
+
+    if(ui->horrorcheckbox->isChecked())
+    {
+        chosengenres[4] = ui->horrorcheckbox->text();
+        usergenrescheck = true;
+    }
+
+    if(ui->othercheckbox->isChecked())
+    {
+        chosengenres[5] = ui->othercheckbox->text();
+        usergenrescheck = true;
+    }
+}
+
 void RegisterWindow::infosave()
 {
     QString username = ui->Usernameline->text();
@@ -23,10 +64,11 @@ void RegisterWindow::infosave()
     int day = ui->birthdayline->text().toInt();
     int year = ui->birthyearline->text().toInt();
     QString gender = "";
-    //QString accounttype = "";
+    QString accounttype = "";
     bool usernamecheck = true;
     bool userpasswordcheck = true;
     bool useragecheck = true;
+    bool usergenrescheck = false;
     bool userfillcheck = true;
 
     if(ui->maleradiobutton->isChecked())
@@ -34,10 +76,10 @@ void RegisterWindow::infosave()
     else if(ui->maleradiobutton->isChecked())
         gender = "Femal";
 
-    //if(ui->userradiobutton->isChecked())
-       // accounttype = "user";
-    //if(ui->adminradiobutton->isChecked())
-       // accounttype = "admin";
+    if(ui->userradiobutton->isChecked())
+        accounttype = "user";
+    if(ui->adminradiobutton->isChecked())
+        accounttype = "admin";
 
     for(int i = 0; i < usersCount; i++)
     {
@@ -48,6 +90,8 @@ void RegisterWindow::infosave()
         }
 
     }
+
+    thecheckboxifs(usergenrescheck);
 
     if(password != retypepassword)
     {
@@ -61,12 +105,12 @@ void RegisterWindow::infosave()
         useragecheck = false;
     }
 
-    if(username == "" || password == "" || retypepassword == "" || month == "" || day == NULL || year == NULL || gender == "" /*|| accounttype == ""*/)
+    if(username == "" || password == "" || retypepassword == "" || month == "" || day == NULL || year == NULL || gender == "" || accounttype == "" || usergenrescheck == false)
     {
        ui->registererrorlabel->setVisible(true);
     }
 
-    else if (usernamecheck == true && userpasswordcheck == true && useragecheck == true && userfillcheck == true)
+    else if (usernamecheck == true && userpasswordcheck == true && useragecheck == true && userfillcheck == true && usergenrescheck == true)
     {
         usernames[usersCount] = username;
         passwords[usersCount] = password;

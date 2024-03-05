@@ -266,84 +266,6 @@
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;*Age is less than 12&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_11">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>300</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Gender</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_12">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>300</y>
-     <width>101</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Account Type</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="maleradiobutton">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>330</y>
-     <width>110</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Male</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="femalradiobuttom">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>360</y>
-     <width>110</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Female</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="userradiobutton">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>330</y>
-     <width>110</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>User</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="adminradiobutton">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>360</y>
-     <width>110</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Admin</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_13">
    <property name="geometry">
     <rect>
@@ -460,6 +382,84 @@
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;*All fields must be filled&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>300</y>
+     <width>120</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Gender</string>
+   </property>
+   <widget class="QRadioButton" name="maleradiobutton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>110</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Male</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="femalradiobuttom">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>40</y>
+      <width>110</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Female</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>300</y>
+     <width>120</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Account Type</string>
+   </property>
+   <widget class="QRadioButton" name="userradiobutton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>110</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>User</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="adminradiobutton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>110</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Admin</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
